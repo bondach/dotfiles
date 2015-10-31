@@ -1,0 +1,117 @@
+//Для использования добавить в $HOME/.Xdefaults строку:
+//!#include ".rxvtrc"
+
+//! Будет ли курсор мигать
+//URxvt.cursorBlink:      true
+
+//!Псевдопрозрачность - в кач-ве фона
+//!поставить обои рабочего стола
+//!URxvt*transparent:     true
+
+//!Яркость прозрачного фона (-100 .. 100)
+//!URxvt*shading:         10
+//!URxvt*background: #080808
+
+//!Та же псевдопрозрачность, без настройки яркости
+//!URxvt.inheritPixmap:     true
+
+//! Иконка окна терминала
+//!URxvt*iconFile: /usr/share/pixmaps/gnome-terminal.xpm
+
+//!! Настройки шрифтов
+  //!URxvt*font:-xos4-terminus-medium-r-normal--14-*-*-*-*-*-u
+  //!URxvt*font:-xos4-fixedsys-medium-r-normal--14-*-*-*-*-*-u
+
+  //!URxvt.font: xft:Terminus Re33 for Powerline:pixelsize=15:autohint=true:antialias=true:hinting=true:style=Regular
+  //!URxvt.boldFont: xft:Terminus Re33 for Powerline:pixelsize=15:autohint=true:antialias=true:hinting=true:style=Bold
+
+  //!URxvt*font: xft:Liberation Mono:pixelsize=13:autohint=true:antialias=true:hinting=true:style=Regular
+  //!URxvt*boldfont: xft:Liberation Mono:pixelsize=13:autohint=true:antialias=true:hinting=true:style=Regular
+
+  //!URxvt*font: xft:Droid Sans Mono:pixelsize=13:autohint=true:antialias=true:hinting=true:style=Regular
+
+  //!URxvt.font: xft:Hack:pixelsize=13:autohint=true:antialias=true:hinting=true:style=Regular
+
+  //!URxvt.boldfont: xft:Ubuntu\ Mono\ derivative\ Powerline:pixelseze=16
+
+  //!URxvt*font: xft:DejaVu Sans Mono:pixelsize=13:autohint=true:antialias=true:hinting=true:style=Regular
+  //!URxvt*boldfont: xft:DejaVu Sans Mono:pixelsize=13:autohint=true:antialias=true:hinting=true:style=Regular
+
+  URxvt*font: xft:PragmataPro:pixelsize=14:autohint=true:antialias=true:hinting=true:style=Regular
+  URxvt*boldfont: xft:PragmataPro:pixelsize=14:autohint=true:antialias=true:hinting=true:style=Regular
+
+  //!URxvt*font: xft:Nouveau IBM Stretch:pixelsize=20:autohint=true:antialias=true:hinting=true:style=Regular
+  
+  //!URxvt*font: xft:Monofur:pixelsize=16:autohint=false:antialias=false:hinting=false:style=Regular:bold=false
+
+  //!URxvt*font: xft:M+ 1mn:pixelsize=14:autohint=false:antialias=false:hinting=false:style=Regular:bold=false
+  //!URxvt.boldfont: xft:M+ 1mn:pixelsize=14:autohint=false:antialias=false:hinting=false:style=Thin
+
+! Горячие клавиши для изменения размера шрифта "на лету"
+! (Ctrl-1 - норма, Ctrl-2 - увеличить до 24)
+! URxvt.keysym.C-1: command:\033]710;-xos4-terminus-medium-r-normal--14-*-*-*-*-*-u\007\033]711;-xos4-terminus-bold-r-normal--14-*-*-*-*-*-u\007
+! URxvt.keysym.C-2: command:\033]710;-xos4-terminus-medium-r-normal--24-*-*-*-*-*-u\007\033]711;-xos4-terminus-bold-r-normal--22-*-*-*-*-*-u\007
+
+! Цвета в man-страницах
+URxvt.colorMode:         on
+URxvt.boldColors:        on
+URxvt.dynamicColors:     on
+URxvt.colorULMode:       on
+URxvt.underLine:         off
+URxvt.colorBDMode:       on
+URxvt.colorBD:           cyan
+
+! Скроллинг + скроллбар
+URxvt*scrollBar:        false
+URxvt*scrollBar_right:  false
+URxvt*scrollstyle:      rxvt
+
+! Отображать символ табуляции как один широкий символ
+! (иначе - как перемещения курсора)
+URxvt.pastableTabs:     true
+
+
+!=== НАСТРОЙКИ ОБРАБОТКИ ССЫЛОК ===
+! Внешняя программа для открытия ссылок
+URxvt.urlLauncher:      firefox
+! Кнопка мыши, которая открывает ссылку
+URxvt.matcher.button:   1
+! Горячие клавиши для выделения ссылок (Alt+U),
+! после выделения ссылка открывается по Enter
+URxvt.keysym.M-u:       perl:url-select:select_next
+! Выделять ссылки голубым цветом
+URxvt.colorUL:          #86a2be
+! Подчеркивать ссылки
+URxvt.underlineURLs:    true
+URxvt.underlineColor:   yellow
+
+
+!=== НАСТРОЙКИ ФУНКЦИОНАЛА ===
+! Сколько строк хранить в памяти
+URxvt*saveLines:        5000
+! Настройки табов
+!URxvt.tabbed.new-button:    no
+!URxvt.tabbed.tabbar-fg:     15
+!URxvt.tabbed.tabbar-bg:     0
+!URxvt.tabbed.tab-fg:        0
+!URxvt.tabbed.tab-bg:        14
+! Оболочка
+URxvt.geometry:         80x25
+URxvt.loginShell:       false
+URxvt.meta:             ignore
+URxvt.utmpInhibit:      true
+
+
+!=== НАСТРОЙКИ РАСШИРЕНИЙ ===
+! Путь для поиска пользовательских расширений
+ URxvt.perl-lib:         $HOME/.config/urxvt/perl/
+! Загружаемые по умолчанию расширения
+! Основные; расширенные табы (без кнопки NEW, можно устанавливать
+! заголовок окна: https://github.com/stepb/urxvt-tabbedex);
+! регэкспы для выделения ссылок в тексте; выбор ссылок горячими
+! клавишами); копирование в буфер обмена
+ URxvt.perl-ext-common:  default,matcher,clipboard-osc
+ URxvt.keysym.Control-Shift-c:   perl:clipboard:copy
+ URxvt.keysym.Control-Shift-v:   perl:clipboard:paste
+ URxvt.copyCommand: xsel -ib
+ URxvt.pasteCommand: xsel -ob
